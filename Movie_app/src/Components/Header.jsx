@@ -40,7 +40,9 @@ function Header() {
               index < 3 && <Headeritem name={""} Icon={item.icon} />,
           )}
         </div>
-        <div className="relative md:hidden flex items-center" onClick={()=>settoggle(!toggle)}>
+        <div className="relative md:hidden flex items-center" onClick={()=>{
+          console.log(toggle);
+          settoggle(!toggle)}}>
           <Headeritem name={""} Icon={HiDotsVertical} />
          {toggle?( <div className="absolute top-full right-0 mt-2 w-48 bg-[#121212] border border-gray-700 rounded-lg shadow-xl z-50 p-2">
             {menu.map(
